@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capture_balance_dist", "capture_balance_dist\capture_balance_dist.csproj", "{68949BFA-8ADB-435E-B5F9-F3260EA83993}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68949BFA-8ADB-435E-B5F9-F3260EA83993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68949BFA-8ADB-435E-B5F9-F3260EA83993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68949BFA-8ADB-435E-B5F9-F3260EA83993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68949BFA-8ADB-435E-B5F9-F3260EA83993}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDEB3BA0-D3AA-4568-AA74-F58232C7128A}
+	EndGlobalSection
+EndGlobal
