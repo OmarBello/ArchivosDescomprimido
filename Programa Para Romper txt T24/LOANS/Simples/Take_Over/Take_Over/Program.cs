@@ -25,10 +25,12 @@ namespace Take_Over
                         count++;
                     }
                     Console.WriteLine(count);
+                   
                 }
                 //Escribiendo archivo
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencialTake_Over.txt")))
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencialTake_Over.csv")))
                 {
+                    outputFile.WriteLine("UPLOAD_COMPANY,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE_DATE,CUSTOMER,CUSTOMER_ROLE,PRODUCT,CURRENCY,ORIG_CONTRACT_DATE");
                     outputFile.WriteLine(resultGerencialTake_Over.Replace("||", ","));
                 }
                 Console.ReadKey();

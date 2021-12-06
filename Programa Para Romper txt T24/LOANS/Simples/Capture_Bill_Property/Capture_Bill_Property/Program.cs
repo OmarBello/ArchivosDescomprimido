@@ -7,6 +7,9 @@ namespace Capture_Bill_Property
     {
         static void Main(string[] args)
         {
+            int opcion = 0;
+
+
             using (StreamReader sr = new StreamReader(@"C:\Users\OB319895\Documents\Resultado Mock1\LOANS\Capture_Bill_V2_Mock1.txt"))
             {
                 string file = sr.ReadToEnd();
