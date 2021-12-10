@@ -36,8 +36,10 @@ namespace capture_balance_Property
                 //Escribiendo archivo
                 using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_capture_balance_Property.txt")))
                 {
+                    outputFile.WriteLine("ADJUST_PROP_1_1,ADJUST_PROP_2_1,ADJ_BAL_TYPE_1_1,ADJ_BAL_TYPE_2_1,NEW_BAL_AMT_1_1,NEW_BAL_AMT_2_1");
                     outputFile.WriteLine(resultGerencial_capture_balance_Property.Replace("!!", ","));
                 }
+                Console.ReadKey();
             }
         }
     }

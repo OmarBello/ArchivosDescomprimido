@@ -20,17 +20,17 @@ namespace Capture_Bill
                     if (line != "")
                     {
                         string completeLine = "DO00" + line;
-                        string primero = completeLine.Substring(0, completeLine.IndexOf("||BALANCE.MAINTENANCE||")).Replace("||BALANCE.MAINTENANCE||", " ");
+                        string primero = completeLine.Substring(0, completeLine.IndexOf("||BALANCE.MAINTENANCE||")).Replace("||BALANCE.MAINTENANCE||", " ").Replace("||||",",");
                         resultGerencial_Capture_Bill += primero + "\n";
                         count++;
                     }
                     Console.WriteLine(count);
-
+                    
 
                 }
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_Capture_Bill.txt")))
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_Capture_Bill2.txt")))
                 {
-                    outputFile.WriteLine("dbum,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE.DATE,PRODUCT,");
+                    outputFile.WriteLine("dbum,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE.DATE,PRODUCT");
                     outputFile.WriteLine(resultGerencial_Capture_Bill.Replace("||", ","));
                 }
                 Console.ReadKey();

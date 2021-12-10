@@ -21,14 +21,16 @@ namespace Charge_Off_Activity_Mock1
                         string completeLine = "DO00" + line;
                         //string primero = completeLine.Substring(0, completeLine.Length);
 
-                        resultadoGerenciaCharge_Off_Activicty += completeLine + "\n";
+                        resultadoGerenciaCharge_Off_Activicty += completeLine.Replace("||||",",") + "\n";
                         count++;
                     }
                     Console.WriteLine(count);
+                    
                 }
                 //Escribiendo archivo
                 using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultadoGerenciaCharge_Off_Activicty.txt")))
                 {
+                    outputFile.WriteLine("UPLOAD_COMPANY,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE_DATE,CURRENCY,ES_NARRATIVE");
                     outputFile.WriteLine(resultadoGerenciaCharge_Off_Activicty.Replace("||", ","));
                 }
                 Console.ReadKey();

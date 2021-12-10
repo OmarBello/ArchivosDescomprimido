@@ -25,13 +25,15 @@ namespace capture_balance
                         count++;
                     }
                     Console.WriteLine(count);
+                   
                 }
+
                 //Escribiendo archivo
                 using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_capture_balance.txt")))
                 {
+                    outputFile.WriteLine("UPLOAD.COMPANY,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE_DATE,PRODUCT");
                     outputFile.WriteLine(resultGerencial_capture_balance.Replace("||", ","));
                 }
-
                 Console.ReadKey();
             }
         }

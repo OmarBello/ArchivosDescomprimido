@@ -25,10 +25,12 @@ namespace AdvancePayment_Simples
                         count++;
                     }
                     Console.WriteLine(count);
+                   
                 }
                 //Escribiendo archivo
                 using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_AdvancePayment_Simples.txt")))
                 {
+                    outputFile.WriteLine("CREDIT_ACCOUNT,DEBIT_CCY,DEBIT_VALUE_DATE,PAYMENT_CURRENCY,PAYMENT_AMOUNT,PAYMENT_EXECUTION_DATE,ADDITIONAL_INFO,ORDERING_PAYMENT_TRESUARY_RATE");
                     outputFile.WriteLine(resultGerencial_AdvancePayment_Simples.Replace("||", ","));
                 }
 
