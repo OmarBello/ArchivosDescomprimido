@@ -29,6 +29,7 @@ namespace capture_balance_dist
                 //Escribiendo archivo
                 using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_capture_balance_dist.txt")))
                 {
+                    outputFile.WriteLine("UPLOAD_COMPANY,AAA ID,ARRANGEMENT,ACTIVITY,EFFECTIVE_DATE,PRODUCT");
                     outputFile.WriteLine(resultGerencial_capture_balance_dist.Replace("||", ","));
                 }
 

@@ -19,17 +19,19 @@ namespace Capture_Bill_Dist
                     if(line != "")
                     {
                         string completeLine = "DO00" + line;
-                        string primero = completeLine.Substring(0, completeLine.IndexOf("BALANCE.MAINTANANCE||"));
+                        string primero = completeLine.Substring(0, completeLine.IndexOf("||BALANCE.MAINTANANCE||")).Replace("||||",",").Replace("||BALANCE.MAINTANANCE||"," ");
 
                        
                         resultGerencial_Capture_Bill_Dist += primero + "\n";
                         count++;
                     }
                     Console.WriteLine(count);
+                   
                 }
                 //Escribiendo archivo
                 using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencial_Capture_Bill_Dist.txt")))
                 {
+                    outputFile.WriteLine("dbum,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE_DATE,PRODUCT");
                     outputFile.WriteLine(resultGerencial_Capture_Bill_Dist.Replace("||", ","));
                 }
 

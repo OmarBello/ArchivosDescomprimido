@@ -19,17 +19,19 @@ namespace Charge_Off_Activity_Dist
                     if(line != "")
                     {
                         string completeLine = "DO00" + line;
-                        string primero = completeLine.Substring(0, completeLine.Length);
+                        string primero = completeLine.Substring(0, completeLine.Length).Replace("||||",",");
 
                         resultGerencialCharge_Off_Activity_Dist += primero + "\n";
                         count++;
                     }
                     Console.WriteLine(count);
-                }
-                //Escribiendo archivo
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencialCharge_Off_Activity_Dist.txt")))
-                {
-                    outputFile.WriteLine(resultGerencialCharge_Off_Activity_Dist.Replace("||", ","));
+                    //Escribiendo archivo
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(@"C:\Users\OB319895\Documents\Resultado_ArchivoTXT24\Loans\", "resultGerencialCharge_Off_Activity_Dist.txt")))
+                    {
+                        outputFile.WriteLine("UPLOAD_COMPANY,AAA_ID,ARRANGEMENT,ACTIVITY,EFFECTIVE_DATE,TXN_AMOUNT,CURRENCY,ES_NARRATIVE");
+                        outputFile.WriteLine(resultGerencialCharge_Off_Activity_Dist.Replace("||", ","));
+                    }
+
                 }
 
                 Console.ReadKey();
